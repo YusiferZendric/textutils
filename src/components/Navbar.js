@@ -26,6 +26,7 @@ export default function Navbar(props) {
                 <label className="form-check-label" changecolor={props.toggle} onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/green${props.mode}.png`} width="30" />&nbsp;&nbsp;</label>
               </div>
               <div className="form-check form-switch">
+                
                 <label className="form-check-label" changecolor={props.toggle} onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/red${props.mode}.png`} width="30" />&nbsp;</label>
               </div>
 
