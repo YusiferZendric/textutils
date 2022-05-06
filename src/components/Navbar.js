@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 export default function Navbar(props) {
 
   return (
@@ -19,10 +18,18 @@ export default function Navbar(props) {
               <a className="nav-link" href="/">About</a>
             </li>
           </ul>
-          <div className="form-check form-switch mt-n1">
-            <input className="form-check-input" onClick={props.toggle} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{{"dark":"🌙","light":"☀️"}[props.mode]}</label>
-          </div>
+
+              <div className="form-check form-switch">
+                <label className="form-check-label" onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/blue${props.mode}.png`} width="30" />&nbsp;&nbsp;</label>
+              </div>
+              <div className="form-check form-switch">
+                <label className="form-check-label" changecolor={props.toggle} onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/green${props.mode}.png`} width="30" />&nbsp;&nbsp;</label>
+              </div>
+              <div className="form-check form-switch">
+                <label className="form-check-label" changecolor={props.toggle} onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/red${props.mode}.png`} width="30" />&nbsp;</label>
+              </div>
+
+
         </div>
       </div>
     </nav>

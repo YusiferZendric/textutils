@@ -5,6 +5,8 @@ import './App.css';
 import React, { useState } from 'react';
 function App() {
   const [mode, setMode] = useState('light');
+  const [color, setColor] = useState('none');
+  console.log(color);
   let handleDarkMode = () => {
     if (mode === 'light') {
       setMode('dark');
@@ -18,9 +20,9 @@ function App() {
   }
   return (
     <>
-      <Navbar title="TextUtils" mode={mode} toggle={handleDarkMode} />
+      <Navbar title="TextUtils" mode={mode} changeColor={setColor} toggle={handleDarkMode} />
       <div className="container my-5">
-        <TextForm heading="Enter the text to analyze" mode={mode}/>
+        <TextForm heading="Enter the text to analyze" changecolor={setColor} mode={mode}/>
       </div>
     </>
   )

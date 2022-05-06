@@ -71,7 +71,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleCamelCase}>camelCase</button>
                 <button className="btn btn-primary btn-block mx-2 my-1" onClick={handlePascalCase}>PascalCase</button>
                 <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleSnakeCase}>Snake_Case</button>
-                <button className="btn btn-success btn-block mx-2 my-1" onClick={handleUndo}>Undo</button>
+                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleUndo}>Undo</button>
             </div>
             <div className="container">
                 <hr />
