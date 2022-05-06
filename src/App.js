@@ -10,7 +10,7 @@ function App() {
   let handleDarkMode = () => {
     if (mode === 'light') {
       setMode('dark');
-      document.body.style.backgroundColor = 'rgb(11 13 16)';
+      document.body.style.backgroundColor = 'rgb(10 22 40)';
       document.body.style.color = '#fff';
     } else {
       setMode('light');
