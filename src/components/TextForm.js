@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types'
 
 export default function TextForm(props) {
+    console.log(props.colour);
     const handleUpClick = () => {
         preText.push(text);
         setText(text.toUpperCase());
@@ -64,14 +65,14 @@ export default function TextForm(props) {
             <div className="container">
                 <label htmlFor="myBox"><h2>{props.heading}</h2></label>
                 <textarea className={`form-control ${{"dark": 'bg-dark text-light',"light":"bg-light text-dark"}[props.mode]} my-3`} id="myBox" value={text} placeholder="Enter your text" onChange={handleOnChange} rows={props.rows}></textarea>
-                <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleDnClick}>Convert to Lowercase</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={generateRandom}>Generate Random</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleCapitalize}>Capitalize</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleCamelCase}>camelCase</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handlePascalCase}>PascalCase</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleSnakeCase}>Snake_Case</button>
-                <button className="btn btn-primary btn-block mx-2 my-1" onClick={handleUndo}>Undo</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} mx-2 my-1`} onClick={handleUpClick}>Convert to Uppercase</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={handleDnClick}>Convert to Lowercase</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={generateRandom}>Generate Random</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={handleCapitalize}>Capitalize</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={handleCamelCase}>camelCase</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={handlePascalCase}>PascalCase</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={handleSnakeCase}>Snake_Case</button>
+                <button className={`btn btn-${{"blue":"primary","green":"success","red":"danger"}[props.colour]} btn-block mx-2 my-1`} onClick={handleUndo}>Undo</button>
             </div>
             <div className="container">
                 <hr />

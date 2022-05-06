@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 export default function Navbar(props) {
+
 
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
@@ -20,14 +22,14 @@ export default function Navbar(props) {
           </ul>
 
               <div className="form-check form-switch">
-                <label className="form-check-label" onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/blue${props.mode}.png`} width="30" />&nbsp;&nbsp;</label>
+                <label id='blue' className="form-check-label" onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/blue${props.mode}.png`} width="30" alt='blue'/>&nbsp;&nbsp;</label>
               </div>
               <div className="form-check form-switch">
-                <label className="form-check-label" changecolor={props.toggle} onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/green${props.mode}.png`} width="30" />&nbsp;&nbsp;</label>
+                <label id='green' className="form-check-label" onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/green${props.mode}.png`} width="30" alt='blue'/>&nbsp;&nbsp;</label>
               </div>
               <div className="form-check form-switch">
-                
-                <label className="form-check-label" changecolor={props.toggle} onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/red${props.mode}.png`} width="30" />&nbsp;</label>
+
+                <label id='red' className="form-check-label" onClick={props.toggle} htmlFor="flexSwitchCheckDefault"><img src={process.env.PUBLIC_URL + `/red${props.mode}.png`} width="30" alt='blue' />&nbsp;</label>
               </div>
 
 
